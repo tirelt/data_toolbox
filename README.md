@@ -13,7 +13,7 @@ cd data_toolbox
 python3 -m venv venv
 source venv/bin/activate 
 pip install -r requirements.txt
-python3 -m ipykernel install --user --name=venv
+python3 -m ipykernel install --user --name=data_toolbox
 ```
 
 ## Usage

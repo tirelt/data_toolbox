@@ -4,3 +4,5 @@ jupyter
 matplotlib
 scikit-learn
 graphviz
+tqdm
+plotly
