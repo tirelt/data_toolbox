@@ -9,8 +9,8 @@ def check_data(df):
     for col in df.columns:
         my_series = df[col]
         type_summary_col.append(get_type_summary(my_series))
-        unique_value_col.append(nbre_unique_value(my_series)/check_data*100)
-        count_nan_col.append(count_nan(my_series)/check_data*100)
+        unique_value_col.append(np.round(nbre_unique_value(my_series)/nbre_entries*100,2))
+        count_nan_col.append(np.round(count_nan(my_series)/nbre_entries*100,2))
 
     array = np.concatenate((np.array([df.columns.values]).T,np.array([count_nan_col,unique_value_col,type_summary_col],dtype=object).T),axis=1)
     df_analysis = pd.DataFrame(data=array,columns = ["Feature","NaN","Unique","Type"])
